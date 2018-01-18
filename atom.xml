@@ -6,7 +6,7 @@
   <link href="/foxFallingSkies/atom.xml" rel="self"/>
   
   <link href="https://foxfallingskies.github.io/foxFallingSkies/"/>
-  <updated>2018-01-18T04:30:52.807Z</updated>
+  <updated>2018-01-18T08:40:49.064Z</updated>
   <id>https://foxfallingskies.github.io/foxFallingSkies/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://foxfallingskies.github.io/foxFallingSkies/2018/01/17/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://foxfallingskies.github.io/foxFallingSkies/2018/01/17/hexo搭建博客/</id>
     <published>2018-01-17T12:28:15.000Z</published>
-    <updated>2018-01-18T04:30:52.807Z</updated>
+    <updated>2018-01-18T08:40:49.064Z</updated>
     
     <content type="html"><![CDATA[<h3 id="第一步：安装hexo"><a href="#第一步：安装hexo" class="headerlink" title="第一步：安装hexo"></a>第一步：安装hexo</h3><ol><li>任意位置点击鼠标右键，选择Git Bash<br><img src="/foxFallingSkies/foxFallingSkies/2018/01/17/hexo搭建博客/bash.png" alt="blog"></li><li>安装hexo，输入命令：npm install -g hexo，然后回车键，然后就不用管了，去倒杯茶回来就好了。有警告，不去管就行了<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li><li>验证是否安装成功，输入hexo -v，将会看到以下信息<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li></ol><h3 id="第二步：创建文件夹"><a href="#第二步：创建文件夹" class="headerlink" title="第二步：创建文件夹"></a>第二步：创建文件夹</h3><ol><li>在自己所需要的位置建立文件夹，例如blog<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li><li>进入blog文件，右键运行Git Bash，输入命令：hexo init。<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"><br>这个过程可能时间有点长，这个时候可以去上个洗手间活动下，然后你就会在文件夹中发现以下文件<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li><li>修改_config.yml,进行基础配置<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li><li>本地预览命令，进入blog文件夹，点击鼠标右键，选择Git Bash 分别输入 hexo g 和hexo s ,就会发现发布成功了，然后输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就会发现博客</li></ol>]]></content>
     

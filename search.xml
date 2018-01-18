@@ -6,15 +6,38 @@
       <title><![CDATA[hexo搭建博客]]></title>
       <url>/foxFallingSkies/2018/01/17/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
       <content type="html"><![CDATA[<h3 id="第一步：安装hexo"><a href="#第一步：安装hexo" class="headerlink" title="第一步：安装hexo"></a>第一步：安装hexo</h3><ol>
-<li>任意位置点击鼠标右键，选择Git Bash<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/bash.png" alt="blog"></li>
-<li>安装hexo，输入命令：npm install -g hexo，然后回车键，然后就不用管了，去倒杯茶回来就好了。有警告，不去管就行了<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li>
-<li>验证是否安装成功，输入hexo -v，将会看到以下信息<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li>
+<li>任意位置点击鼠标右键，选择Git Bash<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/bash.png" alt="bash"></li>
+<li>安装hexo，输入命令：npm install -g hexo，然后回车键，然后就不用管了，去倒杯茶回来就好了。有警告，不去管就行了<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/installHexo.png" alt="blog"><br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/installSuccess.png" alt="blog"></li>
+<li>验证是否安装成功，输入hexo -v，将会看到以下信息<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/hexov.png" alt="blog"></li>
 </ol>
 <h3 id="第二步：创建文件夹"><a href="#第二步：创建文件夹" class="headerlink" title="第二步：创建文件夹"></a>第二步：创建文件夹</h3><ol>
-<li>在自己所需要的位置建立文件夹，例如blog<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li>
-<li>进入blog文件，右键运行Git Bash，输入命令：hexo init。<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"><br>这个过程可能时间有点长，这个时候可以去上个洗手间活动下，然后你就会在文件夹中发现以下文件<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li>
-<li>修改_config.yml,进行基础配置<br><img src="http://img.kuqin.com/upimg/allimg/140915/2209413P6-0.jpg" alt="blog"></li>
+<li>在自己所需要的位置建立文件夹，例如blog<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/createFlo.png" alt="blog"></li>
+<li>进入blog文件，右键运行Git Bash，输入命令：hexo init。<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/initSuccess.png" alt="blog"><br>这个过程可能时间有点长，这个时候可以去上个洗手间活动下，然后你就会在文件夹中发现以下文件<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/initSuccessF.png" alt="blog"></li>
+<li>修改_config.yml,进行基础配置<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/info.png" alt="blog"></li>
 <li>本地预览命令，进入blog文件夹，点击鼠标右键，选择Git Bash 分别输入 hexo g 和hexo s ,就会发现发布成功了，然后输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 就会发现博客</li>
+</ol>
+<h3 id="第三步：搭建GitHub博客"><a href="#第三步：搭建GitHub博客" class="headerlink" title="第三步：搭建GitHub博客"></a>第三步：搭建GitHub博客</h3><ol>
+<li>新建仓库，新建一个名为 你的名字.github.io的仓库，比如说，你的github用户名是king,那么你就需要建立一个king.github.io(必须是你的用户名，否则无效)，以后你的网站访问的网址就是<a href="http://king.github.io" target="_blank" rel="noopener">http://king.github.io</a><br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/createRe.png" alt="blog"></li>
+<li>配置SSH Key,为什么要配置这个东西呢？原因很简单，因为你提交代码的时候需要权限，但是直接使用用户名和密码太不安全了，所以我们就需要配置这个东西来解决权限问题,然后点击鼠标右键，点击Git Bash<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/. ssh #检查本机已存在的ssh密钥</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮件地址&quot;</span><br></pre></td></tr></table></figure></p>
+<p>然后回车，连续几次回车，让你输入东西可以忽略，然后最终会在用户的目录下生成一个.ssh的文件夹，打开用户目录，我的在C:\Users\admin下面，找到.ssh\id_rsa.pub文件，记事本打开并复制里面的内容，打开你的github主页，进入个人设置 -&gt; SSH and GPG keys -&gt; New SSH key：<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/addSsh.png" alt="blog"></p>
+<ol>
+<li>测试是否成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com # 注意邮箱地址不用改</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>如果提示Are you sure you want to continue connecting (yes/no)?，输入yes，然后会看到：<br>Hi liuxianan! You’ve successfully authenticated, but GitHub does not provide shell access.<br>那么恭喜你，配置成功。</p>
+<h3 id="第四步：与hexo相连"><a href="#第四步：与hexo相连" class="headerlink" title="第四步：与hexo相连"></a>第四步：与hexo相连</h3><ol>
+<li>进入你的博客文件夹，配置_config.yml中有关deploy的部分：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:king/king.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="第五步：发布"><a href="#第五步：发布" class="headerlink" title="第五步：发布"></a>第五步：发布</h3><ol>
+<li><p>进入文件夹，点击鼠标右键，选择Git Bash,输入以下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后输入hexo g 生成博客，然后输入hexo d稍等一会就会成功了，然后进入你的博客地址，你就会发现看到你的博客啦<br><img src="/foxFallingSkies/2018/01/17/hexo搭建博客/blog.png" alt="blog"></p>
+</li>
 </ol>
 ]]></content>
       
